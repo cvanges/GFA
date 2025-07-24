@@ -3,6 +3,9 @@
 ## Fasta file with protein sequences for defined gene family:
 ```gfa_lgs1.fa```
 
+## Optional code to remove transcript names from sequence IDs
+```sed 's/|.*$//' raw_gfa_lgs1.fa > gfa_lgs1.fa ```
+
 ### Code for moving file to Alpine
 ##### [CURC Resources](https://curc.readthedocs.io/en/latest/compute/data-transfer.html)
 ##### Using scp from local folder with .fa file (e.g. Downloads)
@@ -67,3 +70,10 @@
 ##### [FastTree website](https://morgannprice.github.io/fasttree/#Usage)
 
 ```fasttree gfa_lgs1.afa > gfa_lgs1.tre```
+
+## Code for moving file to local computer
+
+##### From local machine (e.g. Downloads folder)
+
+```scp cjvanges@colostate.edu@dtn.rc.colorado.edu:/scratch/alpine/cjvanges@colostate.edu/GFA_workshop_2025/gfa_lgs1.afa . ```
+
