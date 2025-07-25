@@ -1,12 +1,14 @@
 # This markdown is to generate a MSA and Phylo Tree for gene family analysis
 
-## Fasta file with protein sequences for defined gene family:
+### Fasta file with protein sequences for defined gene family:
 ```gfa_lgs1.fa```
 
-## Optional code to remove transcript names from sequence IDs
-```sed 's/|.*$//' raw_gfa_lgs1.fa > gfa_lgs1.fa ```
+##### Optional code to remove transcript names from sequence IDs
+``` sed 's/|.*$//' raw_gfa_lgs1.fa > gfa_lgs1_genes.fa ```
+##### Or to remove gene names
+``` sed 's/^>[^|]*|/>/' raw_gfa_lgs1.fa > gfa_lgs1_transcripts.fa ```
 
-### Code for moving file to Alpine
+## Code for moving file to Alpine
 ##### [CURC Resources](https://curc.readthedocs.io/en/latest/compute/data-transfer.html)
 ##### Using scp from local folder with .fa file (e.g. Downloads)
 ```scp gfa_lgs1.fa cjvanges@colostate.edu@login.rc.colorado.edu:~/```
@@ -38,6 +40,18 @@
 
 ##### Check existing conda repositories
 ```conda list```
+
+##### Creat a conda environment to install packages
+
+```module load anaconda```
+
+```conda create --name <my-env>```
+
+```conda create --name mafft_fasttree```
+
+```conda activate mafft_fasttree```
+
+##### Access environment
 ##### Install MAFFT using BioConda - Prompt for installing package dependencies [y/n] - type “y” and enter
 ```conda install -c bioconda mafft```
 ##### Install FastTree using BioConda - Prompt for installing package dependencies [y/n] - type “y” and enter
