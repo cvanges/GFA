@@ -10,6 +10,7 @@
 ##### Instructions for generating protein alignment and tree file are at GFA/MSA_PhylogeneticTree.md
 
 ## 1 Software installation
+##### Installation and analysis should be done from scratch space after running acompile
 
 ### 1.1 Download PAL2NAL - https://www.bork.embl.de/pal2nal/
 ```wget http://www.bork.embl.de/pal2nal/distribution/pal2nal.v14.tar.gz```
