@@ -11,7 +11,7 @@
 
 ## 1 Software installation
 
-### 1.1 Download PAL2NAL
+### 1.1 Download PAL2NAL - https://www.bork.embl.de/pal2nal/
 ```wget http://www.bork.embl.de/pal2nal/distribution/pal2nal.v14.tar.gz```
   
 ```tar -xzf pal2nal.v14.tar.gz```
@@ -28,7 +28,7 @@
 ### Test installation
 ```pal2nal.pl```
 
-### 1.2 Clone PAML from github
+### 1.2 Clone PAML from github - https://github.com/abacus-gene/paml
 ```git clone https://github.com/abacus-gene/paml.git```
 
 ```cd paml/src```
@@ -58,7 +58,7 @@
 
 
 ## 2 Prepare codon-alignment file from protein alignment
-```pal2nal.pl aligned_proteins.faa nucleotides.fna -output paml -nogap > codon_alignment.phy```
+```pal2nal.pl aligned_proteins.faa nucleotides.fna -output paml -nogap > rmes1.codon.aln.phy```
 
 ##### my example
 ```pal2nal.pl rmes1.prot.afa rmes1.cds.fa -output paml -nogap > rmes1_codon_alignment.phy```
@@ -68,7 +68,7 @@
 ##### copy and paste the following lines into the codeml.ctl file
 ##### edit your file for the file names corresponding to your codon-alignment file (.phy) and tree file (.tre)
 ```
-      seqfile = rmes1_codon_alignment.phy      * sequence data filename
+      seqfile = rmes1.codon.aln.phy      * sequence data filename
      treefile = rmes1.prot.tre           * tree structure file name
       outfile = rmes1_results.out        * main result file name
 
